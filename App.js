@@ -1,44 +1,30 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+//React element 
+const heading = <h1 className="head">Hello World from JSX</h1>;
+//Root for React app whatever we create in React will be rendered inside this root
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-/**
- * <div id= "parent">
- *  <div id= "child1">
- *    <h1>Hello from h1</h1>
- *    <h2>Hello from h2</h2>
- *  </div>
- *  <div id= "child2">
- *    <h1>Hello from h1</h1>
- *    <h2>Hello from h2</h2>
- *  </div>
- * </div>
- */
-const parent = React.createElement(
-    "div", { id: "parent" }, [
-    React.createElement("div", { id: "child1" }, [
-        React.createElement("h1", {}, "Hello from h1"),
-        React.createElement("h2", {}, "Hello from h2")
-    ]),
-    React.createElement("div", { id: "child2" }, [
-        React.createElement("h1", {}, "Hello from h1"),
-        React.createElement("h2", {}, "Hello from h2")
-    ])
-]);
-
-
-
-
-// const heading = React.createElement(
-//     "h1",
-//     { id: "heading" },// attributes
-//     "Hello world from React"
-// )
-//createElement is just a object 
-//h1 is a object that is a react element, react element is a plain object
-//props = children + attributes
-console.log(parent);
-// Appending the heading to the root div
-//it need a root element to render
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-//rendering the heading element to the root and converts the react element to a h1 element
-root.render(parent);
+//React Component 
+//what is component? 1) class based components-old 2)functional based component-new
+//React functional component - normal js component which returns some JSX element - name it with capital letter 
+const num = 10;
+const HeadingComponent = () => (
+    <div id="container">
+        {heading}
+        {num}
+        <TitleComponent/>
+        <h1 className="head"> Namaste React Functional Component</h1>
+    </div>
+     
+)
+//component composition - one component can be used inside another component
+const TitleComponent = () => (
+    <div id="title">  
+        <h1 className="title"> Namaste React Functional Component from title</h1>
+    </div>
+)
+//const HeadingComponent2 = () => (<h1 className="head"> Namaste React Functional Component diff syntax </h1>);
+//syntax that babel understands that it is a component 
+root.render(<HeadingComponent />);
+//root.render(heading);

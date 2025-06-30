@@ -1,0 +1,27 @@
+package.json is a configuration for json
+Bundler - bundle our app so that it can be shipped to producted 
+create-react-app using webpack bundler behind the scene
+ex : parcel , webpack , vite etc
+
+two typer of dependencies - 1 dev and 2 normal 
+dev in developement phase 
+normal are in prod also 
+ 
+^ - caret - update version automatically (safe)
+tilde then only updates the major version 
+
+package-lock have exact version of all the dependencies 
+transitive dependencies 
+
+npx - execute the package 
+
+normal browser scripts cannot have import and export 
+type = "module" - it is not normal script its a module
+
+Lec3- React elemet 
+React.createElement (React element) => JS object => HTMLelement(render)
+//const heading = React.createElement("h1",{id:"heading"},"Hello World from React");
+JSX - HTML-like or XML-like syntax, its not HTMl
+JSX(Transpiled before it reaches Jsengine) => who ? PARCEL by a package Babel
+how is this jsx code running? JSX => React.createElement => ReactElement-Js Obj => HTMLelement
+Attributes to JSX are given in Camel case 
