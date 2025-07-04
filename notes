@@ -1,4 +1,4 @@
-package.json is a configuration for json
+/*package.json is a configuration for json
 Bundler - bundle our app so that it can be shipped to producted 
 create-react-app using webpack bundler behind the scene
 ex : parcel , webpack , vite etc
@@ -54,3 +54,18 @@ const TitleComponent = () => (
 //syntax that babel understands that it is a component 
 root.render(<HeadingComponent />);
 //root.render(heading);
+// 
+// 
+Hooks
+- React element - plain js obj 
+- React hook - (normal js utility function )that is given to us by react 
+its written in react code thier are multiple hook 
+- useState() - first import usestate from react as named import 
+It is used to create a state variable it is used store the state of a component
+how to create a state variable?
+const[listRestaurant , setlistRestaurant] = useState([default value]);
+let listRestaurant // normal js variable
+
+//for modifying we need a function which is second param in the array which comes with set 
+-useEffect()
+*/
