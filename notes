@@ -1,71 +1,83 @@
 /*package.json is a configuration for json
-Bundler - bundle our app so that it can be shipped to producted 
+Bundler - bundle our app so that it can be shipped to producted
 create-react-app using webpack bundler behind the scene
 ex : parcel , webpack , vite etc
 
-two typer of dependencies - 1 dev and 2 normal 
-dev in developement phase 
-normal are in prod also 
- 
+two typer of dependencies - 1 dev and 2 normal
+dev in developement phase
+normal are in prod also
+
 ^ - caret - update version automatically (safe)
-tilde then only updates the major version 
+tilde then only updates the major version
 
-package-lock have exact version of all the dependencies 
-transitive dependencies 
+package-lock have exact version of all the dependencies
+transitive dependencies
 
-npx - execute the package 
+npx - execute the package
 
-normal browser scripts cannot have import and export 
+normal browser scripts cannot have import and export
 type = "module" - it is not normal script its a module
 
-Lec3- React elemet 
+Lec3- React elemet
 React.createElement (React element) => JS object => HTMLelement(render)
 //const heading = React.createElement("h1",{id:"heading"},"Hello World from React");
 JSX - HTML-like or XML-like syntax, its not HTMl
 JSX(Transpiled before it reaches Jsengine) => who ? PARCEL by a package Babel
 how is this jsx code running? JSX => React.createElement => ReactElement-Js Obj => HTMLelement
-Attributes to JSX are given in Camel case 
+Attributes to JSX are given in Camel case
 
-//React element 
+//React element
 const heading = <h1 className="head">Hello World from JSX</h1>;
 //Root for React app whatever we create in React will be rendered inside this root
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//React Component 
+//React Component
 //what is component? 1) class based components-old 2)functional based component-new
-//React functional component - normal js component which returns some JSX element - name it with capital letter 
+//React functional component - normal js component which returns some JSX element - name it with capital letter
 const num = 10;
 const HeadingComponent = () => (
-    <div id="container">
-        {heading}
-        {num}
-        <TitleComponent/>
-        <h1 className="head"> Namaste React Functional Component</h1>
-    </div>
-     
+<div id="container">
+    {heading}
+    {num}
+    <TitleComponent />
+    <h1 className="head"> Namaste React Functional Component</h1>
+</div>
+
 )
 //component composition - one component can be used inside another component
 const TitleComponent = () => (
-    <div id="title">  
-        <h1 className="title"> Namaste React Functional Component from title</h1>
-    </div>
+<div id="title">
+    <h1 className="title"> Namaste React Functional Component from title</h1>
+</div>
 )
 //const HeadingComponent2 = () => (<h1 className="head"> Namaste React Functional Component diff syntax </h1>);
-//syntax that babel understands that it is a component 
-root.render(<HeadingComponent />);
+//syntax that babel understands that it is a component
+root.render(
+<HeadingComponent />);
 //root.render(heading);
-// 
-// 
+//
+//
 Hooks
-- React element - plain js obj 
-- React hook - (normal js utility function )that is given to us by react 
-its written in react code thier are multiple hook 
-- useState() - first import usestate from react as named import 
+- React element - plain js obj
+- React hook - (normal js utility function )that is given to us by react
+its written in react code thier are multiple hook
+- useState() - first import usestate from react as named import
 It is used to create a state variable it is used store the state of a component
 how to create a state variable?
 const[listRestaurant , setlistRestaurant] = useState([default value]);
 let listRestaurant // normal js variable
 
-//for modifying we need a function which is second param in the array which comes with set 
+//for modifying we need a function which is second param in the array which comes with set
 -useEffect()
 */
+
+lec6-
+// The API now returns restaurants as individual cards in the 'cards' array.
+// We need to filter these cards to get only the restaurants and then extract the actual restaurant data.
+// 1. Filter the array to only include cards that are restaurants.
+// We can identify them by checking if they have the restaurant 'info' object.
+// 2. Map the filtered array to get the clean restaurant object
+// that your component expects (the object containing the 'info' key).
+
+
+//since we are passing searchtext 
